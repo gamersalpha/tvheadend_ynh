@@ -10,8 +10,8 @@ user=$4
 # Check Wheezy or Jessie
 DEB_VERSION=$(lsb_release -cs)
 
-if [[ "$DEB_VERSION" != "wheezy" ]] && [[ "$DEB_VERSION" != "jessie" ]]; then
-        echo "Tvheadend can only be install on Debian Wheezy or Jessie"
+if [[ "$DEB_VERSION" != "wheezy" ]] && [[ "$DEB_VERSION" != "jessie" ]] && [[ "$DEB_VERSION" != "stretch" ]]; then
+        echo "Tvheadend can only be installed on Debian Wheezy, Jessie, or Stretch"
         exit 1
 fi
 
