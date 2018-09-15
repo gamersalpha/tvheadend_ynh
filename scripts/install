@@ -58,7 +58,8 @@ sed -i "s@ADMINPASSWORD@$adminpass@g" ../conf/superuser
 sed -i "s@PATHTOCHANGE@$path@g" ../conf/nginx.conf
 sed -i "s@ADMINCREDENTIAL@$credential@g" ../conf/nginx.conf
 sudo cp ../conf/nginx.conf /etc/nginx/conf.d/$domain.d/tvheadend.conf
-sudo cp ../conf/superuser /home/hts/.hts/tvheadend/superuser
+sudo mkdir -p /home/$admin/config/
+sudo cp ../conf/superuser /home/$admin/config/superuser
 
 # Remove acces to all users to remove tile
 sudo yunohost app removeaccess tvheadend
